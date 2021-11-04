@@ -17,11 +17,22 @@ def get_age():
     age = int(input("Age:"))
     print(age)
 
+    return age
+
+def do_age_stuff():
+    print(f'The age is', get_age())
 
 def go():
-    print(f'Hey', {get_age()})
+    var = "boss man"
+    print(f'Hey', {})
+    return  var
+
+def length():
+    print(f'Length is ',len("hey bossman "))
 
 
 if __name__ == '__main__':
-    get_age()
+    do_age_stuff()
+    go()
+    length()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
