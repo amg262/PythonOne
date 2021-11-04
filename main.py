@@ -31,8 +31,15 @@ def length():
     print(f'Length is ',len("hey bossman "))
 
 
+###### END OF MY OWN PLAYING AROUND FUNCTIONS ##########
+
+
+
+
+
 if __name__ == '__main__':
-    do_age_stuff()
-    go()
-    length()
+
+    print()
+    # go()
+    # length()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
