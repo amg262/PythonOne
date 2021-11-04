@@ -98,9 +98,9 @@ def mod_2_together():
     grade = int(input("Grade: "))
     last_name = input("Last Name: ")
 
-    if (grade > 90):
+    if grade > 90:
         print("Honor Roll!")
-    elif (grade >= 73):
+    elif grade >= 73:
         print("You pass!")
     else:
         print("You Fail")
@@ -113,6 +113,20 @@ def mod_2_together():
         print("Register on Wednesday")
     else:
         print("Register on Friday")
+
+
+    sport = input("Golf or B-ball: ")
+    player_a = int(input("Player 1:"))
+    player_b = int(input("Player 2:"))
+
+    if (sport == "golf" and player_a < player_b):
+        print(f"Player A wins in {sport} by {player_b - player_a}")
+    elif (sport == "golf" and player_b < player_a):
+        print(f"Player A wins in {sport} by {player_a - player_b}")
+    if (sport == "bball" and player_a < player_b):
+        print(f"Player B wins in {sport} by {player_b - player_a}")
+    elif (sport == "bball" and player_b < player_a):
+        print(f"Player A wins in {sport} by {player_a - player_b}")
 
 
 
