@@ -19,25 +19,32 @@ def get_age():
 
     return age
 
+
 def do_age_stuff():
     print(f'The age is', get_age())
+
 
 def go():
     var = "boss man"
     print(f'Hey', {})
-    return  var
+    return var
+
 
 def length():
-    print(f'Length is ',len("hey bossman "))
+    print(f'Length is ', len("hey bossman "))
 
 
 ###### END OF MY OWN PLAYING AROUND FUNCTIONS ##########
 
-
-
+def run_int_detect():
+    number_intrusions = int(input("Please enter the # of intrusions: "))
+    number_days = int(input("Please enter the # of days: "))
+    average = number_intrusions / number_days
+    print(f"Average per day: {average:.2f}")
 
 
 if __name__ == '__main__':
+    run_int_detect()
 
     print()
     # go()
