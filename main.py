@@ -42,15 +42,14 @@ def run_int_detect():
     number_intrusions = int(input("Please enter the # of intrusions: "))
     number_days = int(input("Please enter the # of days: "))
     average = number_intrusions / number_days
-    activity = ""
 
-    if (average < 20):
+    if average < 20:
         activity = "Low"
-    elif (average >= 20 and average < 100):
+    elif average < 100:
         activity = "Average"
-    elif (average >= 100 and average < 200):
+    elif average < 200:
         activity = "High"
-    elif (average >= 200):
+    else:
         activity = "Critical"
 
     print(f"Average per day: {average:.2f}")
@@ -107,32 +106,30 @@ def mod_2_together():
 
     print("Orientation of Thursday " + str(grade == 9 and last_name < "n"))
 
-    if (last_name < "i"):
+    if (last_name.lower() < "i"):
         print("Register on Monday")
-    elif (last_name >= "i" and last_name < "q"):
+    elif (last_name.lower() < "q"):
         print("Register on Wednesday")
     else:
         print("Register on Friday")
-
 
     sport = input("Golf or B-ball: ")
     player_a = int(input("Player 1:"))
     player_b = int(input("Player 2:"))
 
-    if (sport == "golf" and player_a < player_b):
+    if player_a == player_b:
+        print("They tied")
+    elif sport == "golf" and player_a < player_b:
         print(f"Player A wins in {sport} by {player_b - player_a}")
-    elif (sport == "golf" and player_b < player_a):
+    elif sport == "golf" and player_b < player_a:
         print(f"Player A wins in {sport} by {player_a - player_b}")
-    if (sport == "bball" and player_a < player_b):
+    if sport == "bball" and player_a < player_b:
         print(f"Player B wins in {sport} by {player_b - player_a}")
-    elif (sport == "bball" and player_b < player_a):
+    elif sport == "bball" and player_b < player_a:
         print(f"Player A wins in {sport} by {player_a - player_b}")
-
-
-
-
 
     print("END")
+
 
 if __name__ == '__main__':
     # run_int_detect()
