@@ -43,9 +43,40 @@ def run_int_detect():
     print(f"Average per day: {average:.2f}")
 
 
-if __name__ == '__main__':
-    run_int_detect()
+def run_lab_c():
+    a = 5
+    b = 6
+    c = 11
 
+    if a > b:
+        print(a)
+    else:
+        print(b)
+
+    a=5
+    b=6
+    c=11
+
+    if a > b:
+        print("A")
+    elif a+b == c:
+        print("C")
+    else:
+        print("B")
+
+    a=5
+    b=6
+
+    print(a == b)
+
+    a=5
+    b=6
+    c=11
+    print((a+b) > (b+c) or (a+b) == c)
+
+if __name__ == '__main__':
+    # run_int_detect()
+    run_lab_c()
     print()
     # go()
     # length()
