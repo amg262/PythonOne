@@ -40,7 +40,19 @@ def run_int_detect():
     number_intrusions = int(input("Please enter the # of intrusions: "))
     number_days = int(input("Please enter the # of days: "))
     average = number_intrusions / number_days
+    activity = ""
+
+    if (average < 20):
+        activity = "Low"
+    elif (average >= 20 and average < 100):
+        activity = "Average"
+    elif (average >= 100 and average < 200):
+        activity = "High"
+    elif (average >= 200):
+        activity = "Critical"
+
     print(f"Average per day: {average:.2f}")
+    print(f"Activity Level: {activity}")
 
 
 def run_lab_c():
@@ -53,30 +65,32 @@ def run_lab_c():
     else:
         print(b)
 
-    a=5
-    b=6
-    c=11
+    a = 5
+    b = 6
+    c = 11
 
     if a > b:
         print("A")
-    elif a+b == c:
+    elif a + b == c:
         print("C")
     else:
         print("B")
 
-    a=5
-    b=6
+    a = 5
+    b = 6
 
     print(a == b)
 
-    a=5
-    b=6
-    c=11
-    print((a+b) > (b+c) or (a+b) == c)
+    a = 5
+    b = 6
+    c = 11
+    print((a + b) > (b + c) or (a + b) == c)
+
 
 if __name__ == '__main__':
-    # run_int_detect()
-    run_lab_c()
+    run_int_detect()
+    # run_lab_c()
+
     print()
     # go()
     # length()
