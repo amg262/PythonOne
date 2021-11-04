@@ -12,6 +12,8 @@
 # # Press the green button in the gutter to run the script.
 # if __name__ == '__main__':
 #     print_hi('PyCharm')
+import string
+
 
 def get_age():
     age = int(input("Age:"))
@@ -87,10 +89,41 @@ def run_lab_c():
     print((a + b) > (b + c) or (a + b) == c)
 
 
-if __name__ == '__main__':
-    run_int_detect()
-    # run_lab_c()
+def mod_2_together():
+    last_name = input("Last Name: ")
+    income = float(input("Income: "))
+    credits = int(input("Credits: "))
+    print("You get financial aid " + str(income <= 60000 and credits >= 6))
 
+    grade = int(input("Grade: "))
+    last_name = input("Last Name: ")
+
+    if (grade > 90):
+        print("Honor Roll!")
+    elif (grade >= 73):
+        print("You pass!")
+    else:
+        print("You Fail")
+
+    print("Orientation of Thursday " + str(grade == 9 and last_name < "n"))
+
+    if (last_name < "i"):
+        print("Register on Monday")
+    elif (last_name >= "i" and last_name < "q"):
+        print("Register on Wednesday")
+    else:
+        print("Register on Friday")
+
+
+
+
+
+    print("END")
+
+if __name__ == '__main__':
+    # run_int_detect()
+    # run_lab_c()
+    mod_2_together()
     print()
     # go()
     # length()
