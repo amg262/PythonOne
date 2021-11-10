@@ -142,6 +142,21 @@ def KgKmLiterConvert():
 
     print(f"This calculation is: {km:.2f}km, {liters:.2f}L, {kg:.2f}kg")
 
+def DessertCalc():
+
+    desserts = print("How many desserts did you eat last week you fatty?: ")
+    dInt = int(desserts)
+    avg = dInt / 7
+
+    print(f"Avg: {desserts:.2f}")
+    if avg < 3:
+        print(f"Dessert Level: Good")
+    elif avg >= 3 and avg < 5:
+        print(f"Dessert Level: Fine")
+    else:
+        print(f"Dessert Level: High")
+
+
 if __name__ == '__main__':
     # run_int_detect()
     # run_lab_c()
@@ -150,4 +165,6 @@ if __name__ == '__main__':
     # go()
     # length()
     KgKmLiterConvert()
+    DessertCalc()
+
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
