@@ -131,11 +131,23 @@ def mod_2_together():
     print("END")
 
 
+def KgKmLiterConvert():
+    miles = float(input("Miles: "))
+    gallons = float(input("Gallons: "))
+    pounds = float(input("Pounds: "))
+
+    km = miles * 1.60934
+    liters = gallons * 3.78541
+    kg = pounds * 0.453592
+
+    print(f"This calculation is: {km:.2f}km, {liters:.2f}L, {kg:.2f}kg")
+
 if __name__ == '__main__':
     # run_int_detect()
     # run_lab_c()
-    mod_2_together()
-    print()
+    # mod_2_together()
+    # print()
     # go()
     # length()
+    KgKmLiterConvert()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
