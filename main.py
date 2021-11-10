@@ -142,8 +142,8 @@ def KgKmLiterConvert():
 
     print(f"This calculation is: {km:.2f}km, {liters:.2f}L, {kg:.2f}kg")
 
-def DessertCalc():
 
+def DessertCalc():
     desserts = print("How many desserts did you eat last week you fatty?: ")
     dInt = int(desserts)
     avg = dInt / 7
@@ -155,6 +155,11 @@ def DessertCalc():
         print(f"Dessert Level: Fine")
     else:
         print(f"Dessert Level: High")
+
+#### END OF WEEK ONE - MODULE 1 & 2 #####
+
+#### BEGINNING OF WEEK 2 ######
+
 
 
 if __name__ == '__main__':
