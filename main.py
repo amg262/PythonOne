@@ -211,9 +211,21 @@ def game_system_input():
 
     print(f"You have earned {calc_hours(hours_chores, hours_hw, hours_sport)} hours of play time.")
 
+def calc_step_mi(steps):
+    return (steps * 2.5) / 5280
+
+def calc_step_km(steps):
+    return (steps * .762) / 1000
+
+def step_prog():
+    steps = int(input("Yesterdays steps: "))
+
+    print(f"{steps} steps is {calc_step_mi(steps):.2f} miles and {calc_step_km(steps):.2f} km")
+
 
 if __name__ == '__main__':
-    game_system_input()
+    step_prog()
+    # game_system_input()
     # run_int_detect()
     # number_guess()
     # print_cat("im on bath salts")
