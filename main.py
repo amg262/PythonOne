@@ -211,11 +211,14 @@ def game_system_input():
 
     print(f"You have earned {calc_hours(hours_chores, hours_hw, hours_sport)} hours of play time.")
 
+
 def calc_step_mi(steps):
     return (steps * 2.5) / 5280
 
+
 def calc_step_km(steps):
     return (steps * .762) / 1000
+
 
 def step_prog():
     steps = int(input("Yesterdays steps: "))
