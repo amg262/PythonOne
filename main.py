@@ -12,6 +12,7 @@
 # # Press the green button in the gutter to run the script.
 # if __name__ == '__main__':
 #     print_hi('PyCharm')
+import random
 import string
 
 
@@ -38,11 +39,7 @@ def length():
 
 ###### END OF MY OWN PLAYING AROUND FUNCTIONS ##########
 
-def run_int_detect():
-    number_intrusions = int(input("Please enter the # of intrusions: "))
-    number_days = int(input("Please enter the # of days: "))
-    average = number_intrusions / number_days
-
+def get_activity(average):
     if average < 20:
         activity = "Low"
     elif average < 100:
@@ -51,6 +48,15 @@ def run_int_detect():
         activity = "High"
     else:
         activity = "Critical"
+    return activity
+
+
+def run_int_detect():
+    number_intrusions = int(input("Please enter the # of intrusions: "))
+    number_days = int(input("Please enter the # of days: "))
+    average = number_intrusions / number_days
+
+    activity = get_activity(average)
 
     print(f"Average per day: {average:.2f}")
     print(f"Activity Level: {activity}")
@@ -156,20 +162,68 @@ def DessertCalc():
     else:
         print(f"Dessert Level: High")
 
+
 #### END OF WEEK ONE - MODULE 1 & 2 #####
 
 #### BEGINNING OF WEEK 2 ######
 
+def print_cat(words):
+    print(" /\\_/\\ ")
+    print(f"( o.O )  {words}")
+    print(f" > ^ <")
+
+
+def number_guess():
+    upper = int(input(f"Upper limit:"))
+    guess = int(input(f"Guess: "))
+    num = random.randrange(1, upper)
+
+    if guess == num:
+        print("Correct!")
+    elif guess < num:
+        print("Too low!")
+    else:
+        print("To High!")
+    print(f"Number: {num}")
+
+
+def calc_hours(chores, hw, sport):
+    return (chores * 3) + (hw * 2) + (sport * 4)
+
+
+def calc_games(a, b, c):
+    return (a * 150) + (b * 75) - (c * 100)
+
+
+def game_system_input():
+    cost = float(input("Cost: $"))
+    a_grades = int(input("# of As"))
+    b_grades = int(input("# of Bs"))
+    c_grades = int(input("# of C or lower"))
+    hours_chores = int(input("Hours spent on chores"))
+    hours_hw = int(input("Hours spent on homework"))
+    hours_sport = int(input("Hours spent on sports"))
+
+    if calc_games(a_grades, b_grades, c_grades) >= cost:
+        print(f"You may buy the game system")
+    else:
+        print(f"You may not buy game system")
+
+    print(f"You have earned {calc_hours(hours_chores, hours_hw, hours_sport)} hours of play time.")
 
 
 if __name__ == '__main__':
+    game_system_input()
+    # run_int_detect()
+    # number_guess()
+    # print_cat("im on bath salts")
     # run_int_detect()
     # run_lab_c()
     # mod_2_together()
     # print()
     # go()
     # length()
-    KgKmLiterConvert()
-    DessertCalc()
+    # KgKmLiterConvert()
+    # DessertCalc()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
