@@ -178,12 +178,13 @@ def number_guess():
     guess = int(input(f"Guess: "))
     num = random.randrange(1, upper)
 
-    if guess == num:
-        print("Correct!")
-    elif guess < num:
-        print("Too low!")
-    else:
-        print("To High!")
+    while num != guess:
+        if guess < num:
+            print("Too low!")
+        else:
+            print("Too High!")
+        guess = int(input(f"Guess: "))
+
     print(f"Number: {num}")
 
 
@@ -226,8 +227,54 @@ def step_prog():
     print(f"{steps} steps is {calc_step_mi(steps):.2f} miles and {calc_step_km(steps):.2f} km")
 
 
+def step_counter():
+    input2 = int(input("# steps (-1 when done): "))
+
+    days = 0
+    counter = 0
+    mini = input2
+    maxi = input2
+    while input2 != -1:
+        input2 = int(input("# steps (-1 when done): "))
+        counter += input2
+        days += 1
+
+        if input2 > maxi:
+            mini = input2
+        elif input2 < mini:
+            mini = input2
+
+    print(f"Total steps: {counter}")
+    print(f"Avg steps: {counter / days}")
+    print(f"Total days: {days}")
+    print(f"Min steps: {mini}")
+    print(f"Max steps: {maxi}")
+
+
+def savings_goal():
+    goal = int(input("Savings goal: "))
+    monthly_dep = int(input("Montly deposit: "))
+    apr = int(input("Annual Interest: "))
+
+    for cousins in range(1, 25):
+        gift = 500
+        print(f"Each of {cousins} will have to pay {gift / cousins}")
+
+
+def grains():
+    grains = 1
+    total = 1
+    for i in range(12):
+        grains *= 2
+        total += grains
+        print(f"Square {i + 1} {total}")
+
+    print(f"Total grains {total}")
+
 if __name__ == '__main__':
-    step_prog()
+    step_counter()
+    # number_guess()
+    # step_prog()
     # game_system_input()
     # run_int_detect()
     # number_guess()
