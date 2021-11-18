@@ -35,16 +35,16 @@ def email_gather_me():
         begin += 1
 
 
-def email_gather():
-    begin = 0
-    end = 3
-    group = []
-    while begin < end:
-        email = input("Enter email address: ")
-        if "@" in email:
-            print("EMAIL")
-            begin += 1
-        else:
-            print("Invalid")
+def even_letters():
+    word = input("Word: ")
+    new_word = ""
+    count = 0
 
-email_gather_me()
+    for letter in word:
+        if count % 2 == 0:
+            new_word += letter
+        count += 1
+    print(new_word)
+
+
+even_letters()
