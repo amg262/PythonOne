@@ -271,6 +271,7 @@ def grains():
 
     print(f"Total grains {total}")
 
+
 if __name__ == '__main__':
     step_counter()
     # number_guess()
