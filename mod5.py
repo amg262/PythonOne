@@ -47,4 +47,52 @@ def even_letters():
     print(new_word)
 
 
-even_letters()
+def together():
+    items = []
+    item = input("Enter an item to purchase NA to end")
+
+    while item.lower() != "na":
+        items.append(item)
+        item = input("Enter an item to purchase NA to end")
+
+    items.reverse()
+
+    for item in items:
+        print(item)
+
+
+def participate():
+    parts = ["Bob", "Sue", "Mike", "John", "Bill"]
+    name = input("Name: ")
+
+    if name in parts:
+        print(f"{name} is in!")
+
+
+def lab_a():
+    ips = ['11.16.211.2', '133.1.1.111', '201.22.3.41', '17.55.23.123', '144.211.32.45']
+
+    for ip in ips:
+        nodes = ip.split(".")
+
+        if int(nodes[0]) <= 127:
+            print(f"{ip} Class A Host {'.'.join(nodes[1:])}")
+        elif int(nodes[0]) <= 191:
+            print(f"{ip} Class B Host {'.'.join(nodes[2:])}")
+        else:
+            print(f"{ip} Class C Host {nodes[-1]}")
+
+
+def lab_c():
+    phrase = input("Phrase: ")
+
+    arr = phrase.split(" ")
+    a = []
+    acro = ""
+    for c in arr:
+        acro += c[0]
+
+    print(f"{acro}")
+
+
+lab_c()
